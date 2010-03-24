@@ -1,7 +1,7 @@
 require 'redis'
 
 redis_config = YAML.load(File.read(File.dirname(__FILE__) + "/config/redis.yml"))
-$redis = Redis.new(redis_config[:host])
+$redis = Redis.new(redis_config['host'])
 
 class RedisUrl
   attr_accessor :url, :id
